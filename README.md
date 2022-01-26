@@ -51,3 +51,14 @@
 ## SM_MOEA_FS
 
 > Cheng F, Chu F, Xu Y, et al. A Steering-Matrix-Based Multiobjective Evolutionary Algorithm for High-Dimensional Feature Selection[J]. IEEE Transactions on Cybernetics, 2021.
+
+## MTPSO
+
+> K. Chen, B. Xue, M. Zhang, and F. Zhou, “Evolutionary Multitasking for Feature Selection in High-dimensional Classification via Particle Swarm Optimisation,” IEEE Trans. Evol. Computat., pp. 1–1, 2021, doi: 10.1109/TEVC.2021.3100056.
+
+- 数据以 .mat 的格式放在data文件夹下
+  - 数据格式：**X** : (*InsNum \* Features*)
+  - 标签格式：**Y** : (*InsNum \* 1*)
+- MTPSO为主函数入口，修改运行数据文件名即可运行
+- 由于文章中有些细节没有交代得很清楚，这里的复现很多细节是依照我的理解处理的。具体不明确的地方已经在注释中标注。
+- 该算法仅仅简单实现文章的算法流程，实验结果等没有做详细的对比，很多细节也没有深入研究，仅供参考！
