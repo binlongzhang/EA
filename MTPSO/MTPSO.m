@@ -109,8 +109,11 @@ for iter = 1:max_iter
         % 更新gBest
         [fitValue,index] = min(taskSet{task}.fitness);
         if fitValue < taskSet{task}.gBest.fit
+            taskSet{task}.notChangeIters = 0;
             taskSet{task}.gBest.fit = fitValue;
             taskSet{task}.gBest.pos =  taskSet{task}.position(index,:);
+        else
+            taskSet{task}.notChangeIters = taskSet{task}.notChangeIters + 1;
         end
     end
 
