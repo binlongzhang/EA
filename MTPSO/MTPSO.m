@@ -104,7 +104,7 @@ for iter = 1:max_iter
         taskSet{task}.fitness = getFitness(dataX,dataY,taskSet{task}.position,theta,alpha);
         % 更新pBest
         tempIndex = (taskSet{task}.fitness<taskSet{task}.pBest.fit);
-        taskSet{task}.pBest.pos(tempIndex,:) = taskSet{task}.position(tempIndex,:);
+        taskSet{task}.pBest.pos(tempIndex,:) = taskSet{task}.position(tempIndex,:); 
         taskSet{task}.pBest.fit(tempIndex,:) = taskSet{task}.fitness(tempIndex,:);
         % 更新gBest
         [fitValue,index] = min(taskSet{task}.fitness);
